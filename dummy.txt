@@ -39,3 +39,4 @@ perf: optimize client rendering
 docs: finalize README with screenshots
 chore: final cleanup before demo
 feat: initialize backend and frontend folders
+chore: add .gitignore and README
