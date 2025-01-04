@@ -38,3 +38,4 @@ refactor: clean up routes and controller structure
 perf: optimize client rendering
 docs: finalize README with screenshots
 chore: final cleanup before demo
+feat: initialize backend and frontend folders

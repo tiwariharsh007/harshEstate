@@ -1,7 +1,7 @@
 # Initialize git repo if not already
 git init
 
-# Set user details (change accordingly)
+# Set user details
 git config user.name "tiwariharsh007"
 git config user.email "tiwari007harsh@gmail.com"
 
@@ -54,20 +54,41 @@ if (-not (Test-Path "dummy.txt")) {
     New-Item -ItemType File -Name "dummy.txt" | Out-Null
 }
 
-# Loop and generate commits
+# Loop and generate commits with random skipping to create gaps
 foreach ($commit in $commits) {
+    # 30% chance to skip this commit (to create natural gaps)
+    if ((Get-Random -Minimum 0 -Maximum 10) -lt 3) {
+        Write-Output "Skipping commit: $commit"
+        continue
+    }
+
     $parts = $commit -split "\|", 2
     $date = $parts[0]
     $message = $parts[1]
 
+    # Write commit message to file (so git detects a change)
     Add-Content -Path "dummy.txt" -Value $message
+
     git add .
 
-    # Set commit date
-    $env:GIT_COMMITTER_DATE = "$date 10:00:00"
-    git commit --date "$date 10:00:00" -m "$message"
+    # Set commit date (randomize commit time within the day)
+    $hour = Get-Random -Minimum 9 -Maximum 20
+    $minute = Get-Random -Minimum 0 -Maximum 59
+    $commitDate = "$date $hour`:$minute`:00"
+
+    $env:GIT_COMMITTER_DATE = $commitDate
+    git commit --date "$commitDate" -m "$message"
+
+    # Sometimes insert an extra commit with variation (20% chance)
+    if ((Get-Random -Minimum 0 -Maximum 10) -lt 2) {
+        Add-Content -Path "dummy.txt" -Value "$message (extra)"
+        git add .
+        $extraTime = "$date $($hour):$($minute + 1):30"
+        $env:GIT_COMMITTER_DATE = $extraTime
+        git commit --date "$extraTime" -m "$message (extra work)"
+    }
 }
 
-# Push changes to main branch
+# Push changes to master branch
 git branch -M master
 git push origin master --force
