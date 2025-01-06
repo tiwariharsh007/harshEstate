@@ -1,3 +1,4 @@
 feat: initialize backend and frontend folders
 chore: add .gitignore and README
 chore: install server dependencies (express, mongoose, dotenv)
+feat: setup API server entry point (index.js)
