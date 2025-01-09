@@ -42,3 +42,4 @@ feat: initialize backend and frontend folders
 chore: add .gitignore and README
 feat: create user model and auth controller
 feat: add property listing model and routes
+refactor: extract database connection logic
