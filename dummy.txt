@@ -6,3 +6,4 @@ feat: create user model and auth controller
 fix: correct CORS issue in server config
 feat: add property listing model and routes
 refactor: extract database connection logic
+docs: update README with setup commands
