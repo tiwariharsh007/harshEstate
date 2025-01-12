@@ -8,3 +8,4 @@ feat: add property listing model and routes
 refactor: extract database connection logic
 docs: update README with setup commands
 feat: initialize React client with Vite and Tailwind
+style: apply Tailwind base styling to homepage
