@@ -45,3 +45,4 @@ feat: add property listing model and routes
 refactor: extract database connection logic
 style: apply Tailwind base styling to homepage
 feat: implement registration form in client
+fix: resolve state issue in registration form
