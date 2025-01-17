@@ -46,3 +46,4 @@ refactor: extract database connection logic
 style: apply Tailwind base styling to homepage
 feat: implement registration form in client
 fix: resolve state issue in registration form
+chore: install axios and configure client API helper
