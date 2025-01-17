@@ -12,3 +12,4 @@ style: apply Tailwind base styling to homepage
 feat: implement registration form in client
 fix: resolve state issue in registration form
 feat: add login UI and form validation
+chore: install axios and configure client API helper
