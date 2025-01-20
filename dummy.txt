@@ -48,3 +48,4 @@ feat: implement registration form in client
 fix: resolve state issue in registration form
 chore: install axios and configure client API helper
 feat: connect login form to API
+feat: add listing creation page and form
