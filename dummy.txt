@@ -15,3 +15,4 @@ feat: add login UI and form validation
 chore: install axios and configure client API helper
 feat: connect login form to API
 refactor: centralize API URLs in config
+feat: add listing creation page and form
