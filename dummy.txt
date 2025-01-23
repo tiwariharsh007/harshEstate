@@ -18,3 +18,4 @@ refactor: centralize API URLs in config
 feat: add listing creation page and form
 fix: upload image handler for listing (frontend)
 feat: integrate image upload API (backend)
+fix: resolve file path bug in upload route
