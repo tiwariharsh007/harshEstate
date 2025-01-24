@@ -51,3 +51,4 @@ feat: connect login form to API
 feat: add listing creation page and form
 fix: upload image handler for listing (frontend)
 fix: resolve file path bug in upload route
+style: refine form layout with Tailwind
