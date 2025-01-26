@@ -20,3 +20,4 @@ fix: upload image handler for listing (frontend)
 feat: integrate image upload API (backend)
 fix: resolve file path bug in upload route
 style: refine form layout with Tailwind
+feat: implement listing display with filters
