@@ -21,3 +21,4 @@ feat: integrate image upload API (backend)
 fix: resolve file path bug in upload route
 style: refine form layout with Tailwind
 feat: implement listing display with filters
+fix: filter state link bug
