@@ -23,3 +23,4 @@ style: refine form layout with Tailwind
 feat: implement listing display with filters
 fix: filter state link bug
 feat: add pagination to listings
+docs: update README with running instructions
