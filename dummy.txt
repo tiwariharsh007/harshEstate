@@ -56,3 +56,4 @@ feat: implement listing display with filters
 fix: filter state link bug
 feat: add pagination to listings
 docs: update README with running instructions
+refactor: improve DB query performance with indices
