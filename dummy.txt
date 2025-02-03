@@ -28,3 +28,4 @@ refactor: improve DB query performance with indices
 chore: add environment variable loader
 feat: protect routes with JWT auth
 fix: token refresh logic in backend
+feat: add profile page with user data
