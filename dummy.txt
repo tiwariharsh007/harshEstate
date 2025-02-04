@@ -61,3 +61,4 @@ chore: add environment variable loader
 feat: protect routes with JWT auth
 feat: protect routes with JWT auth (extra)
 fix: token refresh logic in backend
+fix: profile image display issue
