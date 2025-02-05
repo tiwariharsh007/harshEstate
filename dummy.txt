@@ -30,3 +30,4 @@ feat: protect routes with JWT auth
 fix: token refresh logic in backend
 feat: add profile page with user data
 fix: profile image display issue
+style: improve navbar and footer layout
