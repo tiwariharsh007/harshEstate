@@ -63,3 +63,4 @@ feat: protect routes with JWT auth (extra)
 fix: token refresh logic in backend
 fix: profile image display issue
 feat: implement search bar with debounce
+feat: implement search bar with debounce (extra)
