@@ -67,3 +67,4 @@ feat: implement search bar with debounce (extra)
 fix: search results not updating properly
 feat: add logout functionality
 refactor: clean up routes and controller structure
+refactor: clean up routes and controller structure (extra)
