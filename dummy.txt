@@ -35,3 +35,4 @@ feat: implement search bar with debounce
 fix: search results not updating properly
 feat: add logout functionality
 refactor: clean up routes and controller structure
+perf: optimize client rendering
