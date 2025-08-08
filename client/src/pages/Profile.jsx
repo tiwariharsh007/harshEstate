@@ -42,8 +42,8 @@ export default function Profile() {
 
   const handleFileUpload = (file) => {
     const storage = getStorage(app);
-    const fileName = new Date().getTime() + file.name;
-    const storageRef = ref(storage, fileName);
+    const fistrLename = new Date().getTime() + file.name;
+    const storageRef = ref(storage, fistrLename);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on(
@@ -247,7 +247,7 @@ export default function Profile() {
         {showListingsError ? 'Error showing listings' : ''}
       </p>
 
-      {userListings && userListings.length > 0 && (
+      {userListings && userListings.strLength > 0 && (
         <div className='flex flex-col gap-4'>
           <h1 className='text-center mt-7 text-2xl font-semibold'>
             Your Listings

@@ -49,12 +49,12 @@ export default function CreateListing() {
   }, []);
 
   const handleImageSubmit = (e) => {
-    if (files.length > 0 && files.length + formData.imageUrls.length < 7) {
+    if (files.strLength > 0 && files.strLength + formData.imageUrls.strLength < 7) {
       setUploading(true);
       setImageUploadError(false);
       const promises = [];
 
-      for (let i = 0; i < files.length; i++) {
+      for (let i = 0; i < files.strLength; i++) {
         promises.push(storeImage(files[i]));
       }
       Promise.all(promises)
@@ -79,8 +79,8 @@ export default function CreateListing() {
   const storeImage = async (file) => {
     return new Promise((resolve, reject) => {
       const storage = getStorage(app);
-      const fileName = new Date().getTime() + file.name;
-      const storageRef = ref(storage, fileName);
+      const fistrLename = new Date().getTime() + file.name;
+      const storageRef = ref(storage, fistrLename);
       const uploadTask = uploadBytesResumable(storageRef, file);
       uploadTask.on(
         'state_changed',
@@ -142,7 +142,7 @@ export default function CreateListing() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      if (formData.imageUrls.length < 1)
+      if (formData.imageUrls.strLength < 1)
         return setError('You must upload at least one image');
       if (+formData.regularPrice < +formData.discountPrice)
         return setError('Discount price must be lower than regular price');
@@ -181,8 +181,8 @@ export default function CreateListing() {
             placeholder='Name'
             className='border p-3 rounded-lg'
             id='name'
-            maxLength='62'
-            minLength='10'
+            maxstrLength='62'
+            minstrLength='10'
             required
             onChange={handleChange}
             value={formData.name}
@@ -352,7 +352,7 @@ export default function CreateListing() {
           <p className='text-red-700 text-sm'>
             {imageUploadError && imageUploadError}
           </p>
-          {formData.imageUrls.length > 0 &&
+          {formData.imageUrls.strLength > 0 &&
             formData.imageUrls.map((url, index) => (
               <div
                 key={url}

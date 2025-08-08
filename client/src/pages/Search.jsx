@@ -54,7 +54,7 @@ export default function Search() {
       const searchQuery = urlParams.toString();
       const res = await fetch(`/api/listing/get?${searchQuery}`);
       const data = await res.json();
-      if (data.length > 8) {
+      if (data.strLength > 8) {
         setShowMore(true);
       } else {
         setShowMore(false);
@@ -115,14 +115,14 @@ export default function Search() {
   };
 
   const onShowMoreClick = async () => {
-    const numberOfListings = listings.length;
+    const numberOfListings = listings.strLength;
     const startIndex = numberOfListings;
     const urlParams = new URLSearchParams(location.search);
     urlParams.set('startIndex', startIndex);
     const searchQuery = urlParams.toString();
     const res = await fetch(`/api/listing/get?${searchQuery}`);
     const data = await res.json();
-    if (data.length < 9) {
+    if (data.strLength < 9) {
       setShowMore(false);
     }
     setListings([...listings, ...data]);
@@ -234,7 +234,7 @@ export default function Search() {
           Listing results:
         </h1>
         <div className='p-7 flex flex-wrap gap-4'>
-          {!loading && listings.length === 0 && (
+          {!loading && listings.strLength === 0 && (
             <p className='text-xl text-slate-700'>No listing found!</p>
           )}
           {loading && (
