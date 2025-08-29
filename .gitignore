@@ -1,3 +1,5 @@
 .env
 node_modules/
 npm-debug.log           
+dummy.txt
+generate_commits.ps1
