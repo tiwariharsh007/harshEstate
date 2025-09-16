@@ -25,8 +25,6 @@ Originally designed for real estate listings, it has evolved into a **multi-purp
 
 ## 🖼️ Screenshots
 
-> *(Place your screenshots in an `assets` folder and update the paths below)*  
-
 ### 🏠 Landing Page  
 ![Landing Page](./assets/Landing-Page.png)  
 
